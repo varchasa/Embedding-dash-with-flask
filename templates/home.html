@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------ libabries ----------->
+<head>
+  <title> Sentiment Analysis</title>
+
+  <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='/css/styles.css') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src=  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">   </script>  
+  
+</head>
+
+<body>
+<!-----------------navbar------------ -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="/">SENTIMENT ANALYSIS OF COVID-19 TWEETS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/">HOME <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#analysis">ANALYTICS</a>
+      </li>
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link" href="#dashboard">DASHBOARD</a>
+      </li>
+      
+</ul>
+
+    
+  </div>
+</nav>
+<!-----------------navbar ends------------ -->
+<br>
+
+<div class="card text-center" id="analysis">
+    <div class="card-header">PREDICTIVE ANALYTICS</div>
+    <div class="card-body">
+      <h5 class="card-title" >Dashboard on sentiment analysis of COVID-19 tweets</h5>
+      <p class="card-text">Built a dashboard with visualization of poeple's reaction on COVID-19</p>
+      <form action="{{ url_for('tweets') }}">
+        <input type ="submit" class="btn btn-primary" value="Show" target="_blank" name="tweets">
+      </form>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+<br><br>
+  
+  <div class="card text-center" id="dashboard">
+    <div class="card-header">RESEARCH WORK</div>
+    <div class="card-body">
+      <h5 class="card-title" >Dashboard on vizualization</h5>
+      <p class="card-text">Built a dashboard with visualization of poeple reaction to the governement announcements on lockdown extension</p>
+      <form action ="{{ url_for('dashboard') }}">
+      <input type = "submit" class="btn btn-primary" value="Click to view" target="_blank" name="dashboard"></a>
+      </form>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+  
+  <!--------------------dashboard ended--------------------->
+  
+  <br><br>
+
