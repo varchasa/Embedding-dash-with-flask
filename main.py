@@ -2,10 +2,6 @@ import flask
 from flask import Flask, render_template,url_for,request,send_file
 import pandas as pd
 import matplotlib.pyplot as plt
-import csv
-import flask_mysqldb
-from flask_mysqldb import MySQL
-import yaml
 import plotly
 import plotly.express as px
 import plotly.graph_objects as obj
